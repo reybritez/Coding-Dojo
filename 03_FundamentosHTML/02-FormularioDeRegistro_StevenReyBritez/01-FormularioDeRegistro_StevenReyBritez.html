@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fom de Registro</title>
+</head>
+<body>
+    <h1> Formulario de Registro </h1>
+    <div>
+        <form action="/registrar" method="post">
+            <div>
+                <label>Nombre: <b>*</b> </label>
+                <input type="text" name="nombre"  >
+            </div>
+
+            <div>
+                <label>Apellido:<b>*</b> </label>
+                <input type="text" name="apellido" >
+            </div>
+
+            <div>
+                <label>Tu email:<b>*</b> </label>
+                <input type="email" name="email" >
+            </div>
+
+            <div>
+                <label>Contraseña:<b>*</b> </label>
+                <input type="password" name="contraseña" >
+            </div>
+
+            <div>
+                <label>Confirmar contraseña:<b>*</b> </label>
+                <input type="password" name="contraseña" >
+            </div>
+
+            <div>
+                <label>Nacimiento:<b>*</b> </label>
+                <input type="date" name="contraseña" >
+            </div>
+
+            <div>
+                <label> Identidad de Género: </label> <br>
+                <input type="radio" name="gender-identiy" value="masculino" id="masculino">
+                <label for="masculino">Masculino</label>
+                <input type="radio" name="gender-identiy" value="femenino" id="femenino">
+                <label for="femenino">Femenino</label>
+                <input type="radio" name="gender-identiy" value="no-binario" id="no-binario">
+                <label for="no-binario">No Binario</label>
+                <input type="radio" name="gender-identiy" value="prefiero-nr" id="prefiero-nr">
+                <label for="prefiero-nr">Prefiero No Responder</label>
+            </div>
+
+            <div>
+                <label> Una breve descripción de ti: </label> <br>
+                <textarea name="descirpcion" cols="45" rows="5"></textarea>
+            </div>
+            <div>
+                <label> Lenguaje Preferido: </label>
+                <select name="lenguaje">
+                    <option>JavaScript</option>
+                    <option>Go</option>
+                    <option>Python</option>
+                    <option>C++</option>
+                </select>
+            </div>
+            <div>
+                <input type="checkbox" name="ofertas" 
+                id="ofertas" checked >
+                <label for="ofertas">Si, me gustaría 
+                recibir ofertas por correo!</label>
+            </div>
+            <input type="submit" value="Crear Cuenta" >
+            <p> <strong>*</strong> Indica una celda requerida.</p>
+        </form>
+    </div>
+</body>
+</html>
