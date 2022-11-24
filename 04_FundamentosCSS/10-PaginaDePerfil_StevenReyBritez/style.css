@@ -1,0 +1,260 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.header {
+  height: 70px;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+.logo {
+  font-size: 2.6rem;
+  margin: 10px 10px;
+  padding-left: 10%;
+  font-weight: bold;
+}
+.links {
+  margin: 25px 20px;
+}
+.links li {
+  list-style: none;
+}
+.links a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.boton {
+  margin-left: 30%;
+  width: 110px;
+  height: 23px;
+  align-self: center;
+  text-align: center;
+  background-color: #2ca0bb;
+  color: white;
+  border-color: black;
+  box-shadow: 2px 2px 1px gray;
+}
+.boton a {
+  align-content: center;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+.container {
+  width: max;
+  height: max;
+  display: flex;
+}
+.seccionizq {
+  flex: 1;
+}
+
+.seccionder {
+  flex: 1;
+  margin: 50px;
+}
+.caja {
+  width: 500px;
+  background-color: #ffffff;
+  position: absolute;
+  margin: 50px 10%;
+  display: inline-block;
+  box-shadow: 0px 3px 5px 3px #a5a5a5;
+}
+.cabecera {
+  height: 110px;
+  width: 500px;
+  background-color: #2ca0bb;
+}
+.box {
+  width: 500px;
+  height: 180px;
+  margin: 50px 40px;
+}
+.box h2 {
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+.box h3 {
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+.profile {
+  margin: 20px 0px;
+}
+.profile a {
+  position: absolute;
+  margin: 5px 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+#tuerca {
+  height: 25px;
+}
+#map {
+  height: 30px;
+  margin-top: 10px;
+}
+#ciudad {
+  position: absolute;
+  margin: 10px 15px;
+  font-size: 1.5rem;
+}
+#user {
+  position: absolute;
+  margin: -50px 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 60px;
+  box-shadow: 0px 0px 0px 6px white;
+}
+
+.caja2 {
+  width: 500px;
+  background-color: #ffffff;
+  position: absolute;
+  margin: 500px 10%;
+  display: inline-block;
+  box-shadow: 0px 3px 5px 3px #a5a5a5;
+}
+.cabecera2 {
+  height: 50px;
+  width: 500px;
+  background-color: #4d4d4d;
+}
+.cabecera2 h1 {
+  padding: 12px;
+  margin-left: 20px;
+  color: white;
+  font-size: 1.5rem;
+}
+.box2 {
+  width: 450px;
+  height: 100px;
+  margin: 20px 30px;
+}
+.box2 h2 {
+  margin-bottom: 5px;
+  font-size: 1.6rem;
+}
+.box2 span {
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  color: grey;
+}
+.box2 h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.caja3 {
+  width: 400px;
+  background-color: #ffffff;
+  display: inline-block;
+  box-shadow: 0px 3px 5px 3px #a5a5a5;
+}
+.cabecera3 {
+  height: 50px;
+  width: 400px;
+  background-color: #4d4d4d;
+  display: flex;
+  align-items: center;
+}
+.cabecera3 h1 {
+  padding: 10px;
+  margin-left: 30px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.box3 {
+  width: 450px;
+  height: 100px;
+  margin: 20px 0px;
+}
+.box4 {
+  width: 450px;
+  height: 280px;
+  margin: 20px 0px;
+}
+
+.conreq-2 {
+  margin-top: 40px;
+}
+
+.conn-1 {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+.conn-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cajaizquierda {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+.cajaizquierda h3 {
+  font-weight: bold;
+  position: absolute;
+  margin: 5px 60px;
+  font-size: 1.5rem;
+}
+#connprofile {
+  width: 50px;
+  height: 50px;
+}
+
+#connaccept {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+#connclose {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+
+.cajaderecha {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.view-more {
+  width: 400px;
+  height: 60px;
+  font-size: 1.5rem;
+  box-shadow: 0px 3px 5px 3px #a5a5a5;
+}
+
+.view-more a {
+  position: absolute;
+  margin: 10px 25px;
+  font-weight: bold;
+}
+
+.num {
+  background: grey;
+  border-radius: 50%;
+  width: 55px;
+  height: 40px;
+  border: 2px solid grey;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
