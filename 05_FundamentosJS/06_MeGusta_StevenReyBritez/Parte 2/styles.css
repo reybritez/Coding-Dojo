@@ -47,11 +47,13 @@
 .avatar {
   align-self: center;
   font-size: x-large;
+  position: relative;
 }
 
 .perfil h1 {
   font-size: xx-large;
   padding-top: 5%;
+  position: relative;
 }
 
 .imagen {
@@ -71,7 +73,7 @@
 .caja1 {
   margin: 2%;
   width: 700px;
-  height: 180px;
+  height: 200px;
   font-size: x-large;
   border: 4px solid #000;
   font-family: sans-serif;
@@ -79,7 +81,7 @@
 .caja2 {
   margin: 2%;
   width: 700px;
-  height: 180px;
+  height: 200px;
   font-size: x-large;
   border: 4px solid #000;
   font-family: sans-serif;
@@ -88,7 +90,7 @@
 .caja3 {
   margin: 2%;
   width: 700px;
-  height: 180px;
+  height: 200px;
   font-size: x-large;
   border: 4px solid #000;
   font-family: sans-serif;
