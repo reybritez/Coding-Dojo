@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me Gusta Parte 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="top-nav"> 
+            <ul>
+                <li><a href="#">Network</a></li>
+            </ul>
+        </nav>
+        <h1> Your Feed </h1>
+        <div class="columnas">
+            <div class="perfil">
+                <div class="imagen">
+                    <img src="icons/user-circle.png" alt="perfil">
+                </div>
+                <div class="avatar"> <a href="#">Add an avatar</a></div>
+                <h1> James Doe </h1>
+            </div> 
+            <div class="caja">
+                <div class="caja1">
+                    <div class="linea-sup">
+                        <h3> Some User </h3>
+                        <h4> 3 likes </h4>
+                        <button  onclick="boton()"> Like </button>
+                    </div>
+                    <div class="linea-inf">
+                        This is some filter text, it can say anithing we like
+                    </div>
+                </div>
+                <div class="caja2">
+                    <div class="linea-sup">
+                        <h3> Some User </h3>
+                        <h4> 3 likes </h4>
+                        <button  onclick="addLike(this)"> Like </button>
+                    </div>
+                    <div class="linea-inf">
+                        This is some filter text, it can say anithing we like
+                    </div>
+                </div>
+                <div class="caja3">
+                    <div class="linea-sup">
+                        <h3> Some User </h3>
+                        <h4> 3 likes </h4>
+                        <button  onclick="addLike()"> Like </button>
+                    </div>
+                    <div class="linea-inf">
+                        This is some filter text, it can say anithing we like
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
