@@ -1,0 +1,124 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  padding: 0 10%;
+  height: 80px;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #9fc5f8;
+}
+header h1 {
+  flex: 2;
+  align-self: center;
+  font-weight: bold;
+  font-size: xx-large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+}
+nav {
+  flex: 2;
+  align-self: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
+  color: white;
+}
+nav ul li {
+  align-items: center;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
+.city {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 2% 0%;
+}
+.city h3 {
+  flex: 3;
+  font-size: x-large;
+}
+
+.week {
+  display: flex;
+  gap: 50px;
+  margin: 2% 0%;
+  justify-content: space-between;
+  justify-items: center;
+}
+.week .box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #eeefef;
+  text-align: center;
+  height: 290px;
+}
+.week .box img {
+  height: 90px;
+  width: 90px;
+  border-radius: 90px;
+}
+
+.box .temp {
+  display: flex;
+  width: 100px;
+  align-items: center;
+  justify-content: space-between;
+}
+.max {
+  color: red;
+  font-weight: bold;
+}
+.min {
+  color: blue;
+  font-weight: bold;
+}
+.selector {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+.selector p {
+  align-self: center;
+}
+.selector select {
+  border: 3px solid black;
+}
+.dialog {
+  display: flex;
+  position: fixed;
+  margin: 0% 10% 0% 10%;
+  padding: 2%;
+  z-index: 1;
+  border: 3px solid black;
+  align-items: center;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  margin: 0% 10%;
+}
+.dialog button {
+  height: 30px;
+  width: 180px;
+  border: 3px solid black;
+  box-shadow: 2px 5px;
+  color: black;
+}
