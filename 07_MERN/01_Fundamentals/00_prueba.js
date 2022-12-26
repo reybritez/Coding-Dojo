@@ -84,7 +84,7 @@ sayHello("Steven")*/
 const square = n => console.log(n * n);
 square(10)*/
 
-class Deck {
+/* class Deck {
     constructor() {
         const suits = ['Diamond', 'Heart', 'Spade', 'Club'];
         const faces = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King'];
@@ -95,4 +95,61 @@ class Deck {
             });
           });
       }
+  } */
+
+
+Number.prototype.isPrime = function() {
+  for( let i=2; i<this; i++ ) {
+    raiz =Math.sqrt(i);
+      if( raiz % 1 === 0 && raiz === i){            
+          return true;
+      }
   }
+  return false;
+};
+
+const { performance } = require('perf_hooks');
+const start = performance.now();
+let primeCount = 0;
+let num = 2; // por razones matemáticas, 1 se considera primo
+while( primeCount < 1e4 ) {
+    if( num.isPrime() ) {
+        primeCount++;
+    }
+    num++;
+}
+console.log(`The 10,000th prime number is ${num-1}`);
+console.log(`This took ${performance.now() - start} milliseconds to run`);
+
+
+/* const { performance } = require('perf_hooks');
+const start = performance.now();
+
+for (i=0 ; i<=1e2; i++) {
+  if (i%7 == 0) {
+    console.log(i);
+  }
+}
+
+console.log(`This took ${performance.now() - start} milliseconds to run`); */
+
+// 
+/*
+const { performance } = require('perf_hooks');
+const start = performance.now();
+ 
+for (i=0 ; i<=1e2; i++) {
+  if (i%7 == 0) {
+    console.log(i);
+  }
+} 
+
+var array = [];
+for (val=3; val<=99999; val+=3){
+  array.push(val);
+}
+console.log(array);
+
+
+
+console.log(`This took ${performance.now() - start} milliseconds to run`);*/
