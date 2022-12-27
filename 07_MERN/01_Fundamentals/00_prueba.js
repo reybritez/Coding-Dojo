@@ -97,7 +97,7 @@ square(10)*/
       }
   } */
 
-
+/* 
 Number.prototype.isPrime = function() {
   for( let i=2; i<this; i++ ) {
     raiz =Math.sqrt(i);
@@ -121,7 +121,7 @@ while( primeCount < 1e4 ) {
 console.log(`The 10,000th prime number is ${num-1}`);
 console.log(`This took ${performance.now() - start} milliseconds to run`);
 
-
+ */
 /* const { performance } = require('perf_hooks');
 const start = performance.now();
 
@@ -153,3 +153,58 @@ console.log(array);
 
 
 console.log(`This took ${performance.now() - start} milliseconds to run`);*/
+
+
+//CALLBACKS
+/* setTimeout( function() { 
+  console.log("start") 
+}, 3000 );
+    
+console.log("end");
+ */
+
+/* const arr = Object.freeze([1,2,3,4]);
+arr.push(300); // ya no se nos permite cambiar `arr` */
+
+
+/* const groceryList = Object.freeze([
+  { "item": "carrots",           "haveIngredient": "constant language from-rainbow">false },
+  { "item": "onions",            "haveIngredient": true  },
+  { "item": "celery",            "haveIngredient": false },
+  { "item": "cremini mushrooms", "haveIngredient": false },
+  { "item": "butter",            "haveIngredient": true  }
+]); */
+
+/* const needThyme = [ ...groceryList, { "item": "thyme", "haveIngredient": false }]; //SPREAD ... */
+/* const needThyme = groceryList.concat( [ { "item": "thyme", "haveIngredient": false } ] ); //CONCAT
+console.log(needThyme)
+
+const gotTheThyme = [ ...needThyme.slice(0, 5), { ...needThyme[5], "haveIngredient": true } ];
+console.log(gotTheThyme)
+ */
+
+//FREEZE
+const items = Object.freeze(["carrots", "onions", "celery", "mushrooms", "butter", "thyme"]);
+
+//SORT
+const sortedItems = [...items].sort()
+console.log(sortedItems)
+const sortedGroceries = [...items].sort( (a, b) => a.item < b.item ? 1 : -1);
+console.log(sortedGroceries)
+
+//MAP LI HTML
+const groceries = ["pearl onions", "cremini mushrooms", "thyme"];
+const groceryList = groceries.map( item => `<li>${item}</li>` );
+
+const values = [1, 2, 3, 4, 5];
+//MAP VALORES
+const cubes = values.map( val => val**3 ); //[1, 8, 27, 64, 125]
+
+//FILTER
+const evens = values.filter( val => val % 2 === 0 ); //Lista de valores solo pares
+
+//FILTER INCLUDES
+const oFoods = groceries.filter( item => item.includes("o") );
+
+//FILTER Y MAP CONCATENADOS
+const oddCubes = values.filter( val => val % 2 !==0 ).map( val => val**3 ); //Filtra y devuelve al cubo los que quedan : [1, 27, 125]
