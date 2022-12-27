@@ -1,8 +1,6 @@
-import GruposMusicales from "./componentes/Musica";
-
 const App = () => {
 
-  const bienvenida = "Bienvenidos a la app de grupos musicales";
+  const bienvenida = "Bienvenidos a mi primera app react";
   
   const numeros = [1,2,3,4,5];
 
@@ -14,9 +12,6 @@ const App = () => {
         numeros.map(numero => { return (<p> Numero: {numero} </p>);
         })
       }
-      
-      <GruposMusicales nombre="Tool" estilo="tool"/>
-      <GruposMusicales nombre="AC/DC" estilo="rock"/>
       </div>
     );
 }
