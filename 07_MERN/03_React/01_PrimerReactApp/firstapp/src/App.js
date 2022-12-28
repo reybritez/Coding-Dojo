@@ -1,15 +1,15 @@
 const App = () => {
 
-  const bienvenida = "Bienvenidos a mi primera app react";
+  const bienvenida = "Hello Dojo!";
   
-  const numeros = [1,2,3,4,5];
+  const listaDeCosas = ["Learn React", "Climb Mt. Everest", "Run a marathon", "Feed the dogs"];
 
   return (
     <div className="App">
       <h1> {bienvenida} </h1>
-
+      <h2> Things i need to do:</h2>
       {
-        numeros.map(numero => { return (<p> Numero: {numero} </p>);
+        listaDeCosas.map(item => { return (<p> * {item} </p>);
         })
       }
       </div>
