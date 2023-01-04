@@ -5,15 +5,16 @@ import reportWebVitals from './reportWebVitals';
 import PersonCard from './components/PersonCard';
 import MyNewComponent from './components/MyNewComponent';
 import LightSwitch from './components/LightSwitch';
+import PoniendoJunto from './components/PoniendoTodoJunto';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <PersonCard firstName={"Jane"} lastName={"Doe"} age={45} hairColor={"Black"} />
+    {/* <PersonCard firstName={"Jane"} lastName={"Doe"} age={45} hairColor={"Black"} />
     <PersonCard firstName={"John"} lastName={"Smith"} age={88} hairColor={"Brown"} />
     <PersonCard firstName={"Millard"} lastName={"Fillmore"} age={50} hairColor={"Brown"} />
     <PersonCard firstName={"Maria"} lastName={"Smith"} age={62} hairColor={"Brown"} />
-    {/* <MyNewComponent header={ "Header Prop" }>
+    <MyNewComponent header={ "Header Prop" }>
         <p>This is a child</p>
         <p>This is another child</p>
         <p>This is even another child</p>
@@ -21,6 +22,8 @@ root.render(
     </MyNewComponent>
 
     <LightSwitch />   */}
+    <PoniendoJunto firstName={"Jane"} lastName={"Doe"} age={45} hairColor={"Black"} />
+    <PoniendoJunto firstName={"Millard"} lastName={"Fillmore"} age={50} hairColor={"Brown"} />
   </React.StrictMode>
 );
 
