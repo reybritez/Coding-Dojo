@@ -1,0 +1,13 @@
+.main {
+  margin: 1%;
+  background-color: #e06666;
+  border: solid 2px black;
+  height: 450px;
+  width: 100%;
+}
+
+.cols {
+  display: flex;
+  flex-direction: row;
+  flex: 3;
+}

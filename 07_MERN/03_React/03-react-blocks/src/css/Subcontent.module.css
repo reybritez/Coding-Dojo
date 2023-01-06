@@ -1,0 +1,7 @@
+.col {
+  flex: 1;
+  background-color: #ffd966;
+  margin: 2%;
+  border: solid 2px black;
+  height: 300px;
+}
