@@ -22,7 +22,7 @@ const Form = (props) => {
           <input type="text" name="lastName" onChange={enCambio} />
         </fieldset>
         <fieldset className="field">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Set Email</label>
           <input type="email" name="email" onChange={enCambio} />
         </fieldset>
         <fieldset className="field">

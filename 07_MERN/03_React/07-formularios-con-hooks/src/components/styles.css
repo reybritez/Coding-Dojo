@@ -11,9 +11,27 @@
 .field {
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-end;
   justify-content: center;
   height: 100%;
+  width: 300px;
   background-color: #d5d4d4;
+}
+
+.field input {
+  align-items: flex-end;
+  margin-left: 20px;
+}
+
+.field label {
+  color: grey;
+}
+
+.results h1 {
+  font-weight: bold;
+}
+
+.results p {
+  align-items: flex-end;
 }
