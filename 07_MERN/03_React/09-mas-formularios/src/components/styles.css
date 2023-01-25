@@ -1,0 +1,44 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.field {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 300px;
+  background-color: #d5d4d4;
+}
+
+.order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field input {
+  align-items: center;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+.field label {
+  color: grey;
+}
+
+.results h1 {
+  font-weight: bold;
+}
+
+.results p {
+  align-items: flex-end;
+}
