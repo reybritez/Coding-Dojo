@@ -1,0 +1,10 @@
+.beautiful-lista {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  margin-left: 500px;
+}
+.beautiful-lista li {
+  list-style: none;
+}
