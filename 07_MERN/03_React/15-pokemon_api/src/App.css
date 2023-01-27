@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.centrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.button-fetch {
+  background-color: gray;
+  color: white;
+  font-size: large;
+  border-radius: 5px;
+}

@@ -7,10 +7,10 @@ function App() {
   const [pokemons, setPkmns] = useState([]);
   
   return (
-    <>
+    <div className='centrar'>
       <BtnFetch pokemons={pokemons} setPkmns={setPkmns} />
       <ShowPkmn pokemons={pokemons}/>
-    </>
+    </div >
   );
 }
 
