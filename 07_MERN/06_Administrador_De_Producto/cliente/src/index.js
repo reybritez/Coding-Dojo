@@ -6,16 +6,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ViewCreateProduct from "./routes/ViewCreateProduct";
 import ViewDetailProduct from "./routes/ViewDetailProduct";
 import ViewShowProducts from "./routes/ViewShowProducts";
+import ViewEditProduct from "./routes/ViewEditProduct";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ViewCreateProduct />} />
+        <Route path="/" element={<ViewShowProducts />} />
         <Route path="/create" element={<ViewCreateProduct />} />
-        <Route path="/show" element={<ViewShowProducts />} />
         <Route path="/products/:id" element={<ViewDetailProduct />} />
+        <Route path="/products/:id/edit" element={<ViewEditProduct />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
