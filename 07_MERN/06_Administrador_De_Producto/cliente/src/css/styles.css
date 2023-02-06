@@ -35,3 +35,11 @@ body {
   padding: 10px 20px;
   box-shadow: 3px 3px 0px #888787;
 }
+
+.container ul li {
+  list-style: decimal-leading-zero;
+  margin-top: 2%;
+  margin-left: 10%;
+  font-size: larger;
+  color: black;
+}

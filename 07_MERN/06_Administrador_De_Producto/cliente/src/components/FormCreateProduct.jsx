@@ -1,14 +1,17 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const FormCreateProduct = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form updated");
+    navigate("/");
 
     const newProduct = {
       name,
