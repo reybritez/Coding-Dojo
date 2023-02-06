@@ -2,7 +2,7 @@ import "../css/styles.css";
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const ViewEditProduct = () => {
   const { id } = useParams();
@@ -10,6 +10,7 @@ const ViewEditProduct = () => {
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -38,6 +39,7 @@ const ViewEditProduct = () => {
       .put(`http://localhost:8000/api/products/update/${id}`, newProduct)
       .then((res) => {
         console.log(res.data);
+        navigate("/");
       })
       .catch((err) => {
         console.log(err);
