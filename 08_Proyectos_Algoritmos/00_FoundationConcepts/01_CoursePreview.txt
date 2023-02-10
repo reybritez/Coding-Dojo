@@ -1,0 +1,200 @@
+--- INTRO
+--- CODE FLOW
+
+- Variables
+Imagínate si tuvieras dos objetos (un libro y una pelota) que quisieras llevar en tus manos. Con dos manos es bastante fácil llevar dos objetos. Sin embargo, ¿y si también tuvieras un sándwich? No tienes suficientes manos, por lo que necesitas uno o más contenedores para cada uno de los objetos. ¿Y si tuvieras una caja con una etiqueta dentro de la cual puedes poner uno de tus objetos? La caja está cerrada, por lo que todo lo que ves es la etiqueta, pero es bastante fácil abrir la caja y mirar dentro. Esto es, básicamente, lo que hace una variable.
+
+
+
+Una variable es un lugar específico en la memoria, con una etiqueta que le asignas. Puedes poner lo que quieras en esa ubicación de memoria y luego hacer referencia al valor de esa memoria, usando la etiqueta. La sentencia es:
+
+var myName = 'Martin';
+
+
+
+- Tipos de Datos
+
+- Equals (¡No todos los signos igual son iguales!)
+Usa = para establecer cosas, == para probar cosas. El signo igual simple es para asignar y el doble-igual es para comparar.
+
+- Consola 
+
+- Funciones
+
+Supongamos que estás escribiendo un fragmento de código que tiene cinco lugares diferentes en donde debe mostrar tu nombre. Como se mencionó anteriormente, para código que quieras llamar con frecuencia, sepáralo en una parte diferente de tu archivo, de modo que no sea necesario duplicar estas líneas de código cada vez que se asigne tu nombre. Esto se llama FUNCIÓN. Crear (o declarar) una función podría verse así:
+
+
+- Condicionales
+Si estás conduciendo y te topas con una bifurcación en la carretera, debes decidir qué camino tomar. Lo más probable es que decidas basándote en alguna muy buena razón. En código, hay un mecanismo similar. Las declaraciones IF miran el valor de una variable, o quizás comparan dos variables, y luego ejecutan ciertas líneas de código si el resultado es el esperado. Si se quiere, también se puede ejecutar otras líneas de código si el resultado es el contrario. El punto importante es que cada decisión tiene solo dos resultados posibles. Tiene que realizarse una determinada prueba o comparación; IF (si) la prueba pasa, THEN (entonces) ejecuta cierto código. Si quieres, puedes ejecutar otro código en el caso de que "la prueba no se pase" (ELSE). Este código se vería así:
+
+if (EXPRESSION) // EXPRESSION is evaluated upon reaching this line
+{
+    // body of 'IF': code runs only if EXPRESSION evaluates to true
+}
+else
+{
+    // body of 'ELSE': code runs only if EXPRESSION evaluates to false
+}
+
+- Condicionales complejas
+En el lenguaje hablado, podemos crear declaraciones condicionales compuestas como "Si es viernes y estoy de buen humor, ¡salgamos y divirtámonos!" Por tanto, no saldríamos si no es viernes o si no estoy de buen humor. Hay símbolos en JavaScript que representan estos conceptos lógicos AND, OR y NOT.
+
+&& AND 
+|| OR
+!  NOT 
+
+
+- Encadenamiento y anidamiento
+
+- Bucles 
+A veces, tendrás líneas de código que quieres ejecutar más de una vez seguidas. Sería un desperdicio simplemente copiar y pegar ese código una y otra vez. Además, si alguna vez necesitas cambiar el código, deberás cambiar todas esas líneas una por una. ¡Qué desastre! En su lugar, puedes indicar que una sección de código debe ejecutarse varias veces. Considera lo siguiente: "Haz lo que te digo cuatro veces: salta sobre un pie". Eso sería mucho mejor que “Salta sobre un pie. Salta  sobre un pie. Salta sobre un pie. Salta sobre un pie ", (aunque sea igual de tonto). Los lenguajes de programación tienen el concepto de LOOP (bucle) que es esencialmente una sección de código que se ejecutará un cierto número de veces. Hay algunos tipos diferentes de bucles. Los más comunes son los bucles FOR y WHILE. ¿Exploremos cada uno de ellos por turnos? Vamos a ello.
+
+Bucles FOR
+Los bucles FOR son útiles cuando se sabe cuántas veces se ejecutarán esas líneas de código. Los bucles WHILE son un poco mejores cuando no sabes cuántas veces se repiten, pero se hará mientras una determinada prueba siga siendo cierta. Para crear un bucle FOR, además del código que se va a enlazar, especificas tres cosas entre paréntesis después del FOR: cualquier configuración inicial, una prueba que debe ser verdadera para iniciar el bucle y cualquier código que se ejecute al final de cada bucle. Aquí hay un ejemplo anotado:
+//     A ;         B ;         D
+for (var num = 1; num < 6; num = num + 1)
+{
+    // C
+    console.log("I'm counting! The number is ", num);
+}
+// E
+console.log("We are done. Goodbye world!");
+Lo anterior se ejecutará en esta secuencia: A - B-C-D - B-C-D - B-C-D - B-C-D - B-C-D - B - E.
+
+
+
+
+Repasemos este bucle FOR en detalle. Al principio, se crea la variable local num y se establece en un valor de 1. Este paso A ocurre exactamente una vez, luego comenzamos a hacer un bucle. Paso B: comparamos num con 6. Si es menor que 6, entonces se ejecuta el código entre llaves (paso C), y luego se agrega 1 a num (paso D). Luego regresamos al paso B. Cuando la prueba en el paso B falla, salimos inmediatamente sin ejecutar el paso C o el paso D. En ese punto, la ejecución continúa desde el paso E, siguiendo nuestra llave-cerrada.
+
+ 
+
+Dicho de otra manera, primero INIT, luego [TEST? - BODY - INCREMENT] mientras TEST sea verdadero, luego salimos.
+
+for(INITIALIZATION; TEST; INCREMENT/DECREMENT)
+{
+    // BODY of the loop –
+    // this runs repeatedly as long as TEST is true
+}
+
+
+Bucles WHILE
+Los bucles WHILE son similares a los bucles FOR, excepto que faltan dos piezas. Primero, no hay una configuración inicial como está integrada en un bucle FOR. Además, a diferencia de una instrucción FOR, un WHILE no incluye de forma automática código que se ejecuta al final de cada ciclo (nuestra D anterior). Los bucles WHILE son geniales cuando no sabes cuántas veces (iteraciones) realizará un bucle. Cualquier bucle FOR se puede escribir como un bucle WHILE. Por ejemplo, el bucle FOR anterior podría escribirse en su lugar como este bucle WHILE, que se ejecutaría de forma idéntica:
+
+// A
+var num = 1;
+// B
+while (num < 6)
+{
+    // C
+    console.log("I'm counting! The number is " + num);
+    // D
+    num = num + 1;
+}
+// E
+console.log("We are done. Goodbye world!");
+Con un comportamiento idéntico al bucle FOR anterior, el código WHILE escrito inmediatamente arriba se ejecutará en esta secuencia: A - B-C-D - B-C-D - B-C-D - B-C-D - B-C-D - B - E.
+
+Repasemos antes de continuar. Cualquier cosa que hagamos con un bucle FOR, podríamos lograrlo con un bucle WHILE en su lugar, y viceversa. Entonces, ¿cuándo debemos usar los bucles FOR y cuándo debemos usar los bucles WHILE? En genereal, usa bucles FOR cuando sepas exactamente cuánto tiempo debe ejecutarse un bucle. Usa los bucles WHILE cuando tengas una condición que mantenga el bucle en ejecución (o que hará que el bucle se detenga), pero no estás seguro de cuántas iteraciones requerirá exactamente.
+
+
+
+Otros consejos sobre bucles
+A algunos desarrolladores les gusta incrementar el valor de una variable ejecutando num+ = 1; esto es lo mismo que escribir num = num+1. A veces puedes ver num ++ o incluso ++ num; ambos son equivalentes a + =.
+
+var index = 2;
+index = index + 1;
+index++;
+// index now holds a value of 4
+De la misma manera, podemos disminuir el valor de num ejecutando simplemente num--; o –num;. Esto es exactamente lo mismo que ejecutar num = num-1; o num - = 1. También hay operadores * = y / =, que multiplican y dividen un número como cabría esperar.
+
+var counter = 5;
+counter = counter - 1; // counter now holds a value of 4
+counter--; // counter is now 3
+counter *= 6; // counter is 18
+counter /= 2; // counter == 9
+Además, no todos los bucles deben incrementarse en uno. ¿Puedes adivinar lo que produciría lo siguiente?
+
+for(var num = 10; num > 2; num = num - 1)
+{
+    console.log('num is currently', num);
+}
+
+Sí, así es: este bucle FOR cuenta hacia atrás de uno en uno, comenzando en 10, mientras que num es mayor que 2. Por lo tanto, contaría 10,9,8,7,6,5,4,3.
+
+ 
+
+¿Cómo escribirías todos los números pares del 1 al 1000000? ¿Cómo escribirías todos los múltiplos de 7 (7, 14, ...) hasta 100? Comprender cómo usar los bucles FOR es fundamental, así que familiarízate con esto.
+
+- Bucles y Flujo de Codigo
+
+Bucles y flujo de código
+Con bucles más complejos, es posible que debas salir de un bucle antes u omitir el pase actual pero continuar con el bucle. En JavaScript, puedes utilizar palabras clave especiales BREAK (romper) y CONTINUE (continuar) para hacer esto. La palabra clave BREAK sale inmediatamente del bucle específico en el que te encuentras actualmente. Incluso la afirmación final del bucle (num = num + 1 arriba) no se ejecutará. CONTINUE omite el resto del paso actual a través del bucle, pero se ejecuta cualquier instrucción de fin de bucle y el bucle continuará. Con ambos, una vez que se ejecutan, se omite cualquier código subsiguiente dentro del ciclo.
+
+Aquí tienes un ejemplo. El siguiente código imprime las dos primeras líneas, pero luego sale inmediatamente del bucle.
+
+var num = 1;
+while(num < 5)
+{
+    if(num == 3)
+    {
+        break;
+        // if you have code here, it will never run!
+    }
+    console.log("I'm counting! The number is ", num);
+    num = num + 1; // if we break, these lines won't run
+}
+//I'm counting! The number is 1
+//I'm counting! The number is 2
+Lo siguiente cuenta de 1 a 4, mostrando algo sobre cada número, pero se olvida por completo del 3, porque cuando num == 3, un CONTINUE se salta el resto del ciclo y procede (después de sumar 1 a num).
+
+for(var num = 1; num < 5; num += 1)
+{
+    if(num == 3)
+    {
+        continue;
+        // if you have additional code down here, it will never run!
+    }
+console.log("I'm counting! The number is ", num);
+}
+//I'm counting! The number is 1
+//I'm counting! The number is 2
+//I'm counting! The number is 4
+Los bucles suelen utilizar el BREAK. Siéntete cómodo usándolo para realizar un bucle durante una serie de iteraciones, luego sal (exit) cuando encuentres una determinada condición. ¡Con esto, no es descabellado ver WHILE(true)! Dios mío.
+
+- Parametros 
+Poder llamar a otra función puede ser útil para eliminar una gran cantidad de código fuente duplicado. Dicho esto, una función que siempre hace exactamente lo mismo será útil solo en situaciones específicas. Sería mejor si las funciones fueran más flexibles y pudieran personalizarse de alguna manera. Afortunadamente, puedes pasar valores a funciones, de modo que las funciones puedan comportarse de manera diferente según esos valores. El llamador simplemente inserta estos valores (llamados argumentos) entre paréntesis, cuando ejecuta la función. Cuando se ejecuta la función, esos valores se copian y están disponibles como cualquier otra variable. Específicamente, dentro de la función, estos valores copiados se denominan parámetros.
+
+Por ejemplo, digamos que hemos extraído nuestro código de saludo amistoso anterior a una función separada, llamada greetSomeone (saludar a alguien). Esta función podría incluir un parámetro que utiliza el código interno para personalizar el saludo, tal como lo hicimos en nuestro código independiente anterior. Dependiendo del argumento que envíe el llamador, nuestra función tendría diferentes resultados. Al unir las ideas de funciones, parámetros, condicionales e impresión, este código podría verse así:
+
+function greetSomeone(person)
+{
+    if (person == "Martin") 
+    {
+        console.log("Yo dawg, howz it goin?");
+    }
+    else
+    {
+        console.log("Greetings Earthling!");
+    }
+}
+Es posible que observes en el código anterior que hay llaves que no están solas en sus propias líneas, como estaban en los ejemplos de código anteriores. Al lenguaje JavaScript no le importa si les das su propia línea o si los incluyes al final de la línea anterior, siempre que estén presentes. Realmente, las llaves son una forma de indicarle al sistema algunas líneas de código que debe tratar como un solo grupo. Sin estas, las sentencias IF… ELSE y WHILE y FOR solo operarán en una línea de código. Incluso si tu bucle es solo una línea de código (y, por lo tanto, funcionaría sin llaves), siempre es más seguro incluirlas, en caso de que agregues más código a tu bucle más adelante, y para reforzar los buenos hábitos.
+
+Entonces, ¿es mejor incluirlos en sus propias líneas o agregarlos al final de las líneas anteriores? Esto es realmente una cuestión de elección: siempre que las incluyas (y siempre deberías hacerlo), a JavaScript no le importan algunos caracteres adicionales en una nueva línea o espacios adicionales. Con el tiempo, desarrollarás tu propio estilo de codificación, escribiendo el código fuente de la forma que te resulte más comprensible. Sin embargo, ten en cuenta que cuando te unas a un equipo de software, es probable que debas adoptar el estilo de codificación del equipo (si tienen uno). Si no es así, incluso en ese caso, generalmente deberías coincidir con el estilo del código existente en los archivos fuente en los que estás trabajando. Por lo tanto, a medida que desarrolles tu estilo personal, procura mantenerte flexible.
+
+- Resumen 
+Resumen
+Ojalá, este primer capítulo te haya hecho sentir más cómodo con los componentes básicos del software. A continuación se muestra un resumen de las ideas que tratamos.
+
+ Las computadoras pueden hacer cosas asombrosas, pero es necesario que se les diga qué hacer. Les decimos qué hacer ejecutando software. El software generalmente se construye a partir de código fuente, que es legible por humanos y es una secuencia de pasos básicos que una computadora seguirá de forma exacta. Hay muchos lenguajes de software diferentes (como JavaScript), con diferentes formas de expresar estos pasos básicos, sin embargo, la mayoría de los conceptos principales son universales. Nuestro trabajo es dividir los problemas en estos pasos, y luego la computadora ejecutará ese código cuando se le indique. Generalmente, cuando se ejecuta código fuente, se ejecuta de forma lineal desde la primera línea hasta la última línea. Sin embargo, podemos cambiar este flujo agregando la estructura “fork-in-the-road” (bifurcación-en-el-camino) (condicional) o “do-that-part-a-few-times” (haz-esa-parte-varias-veces) (bucle) a nuestro código fuente.
+
+Una variable es un espacio local etiquetado que puede contener un valor. Nos referimos a una variable por su etiqueta si queremos leer o cambiar ese valor. Los valores pueden ser de tipos diferentes, como números, cadenas o booleanos. Una cadena es una secuencia de caracteres y un booleano es simplemente un valor verdadero/falso. JavaScript (también conocido como JS) cambia automáticamente los valores de un tipo a otro según sea necesario.
+
+Un único igual (=) se utiliza para establecer valores en variables y se puede combinar con operadores matemáticos normales (+ - * /). El operador == compara dos valores, lo que permite a JS convertir tipos de datos si es necesario; el operador === no permite convertir los tipos. Imprimimos mensajes en la consola del desarrollador usando la función console.log, que acepta una cadena (o convierte las entradas en una cadena).                                       
+
+Podemos examinar los valores de las variables y desviar el flujo de ejecución del código fuente en función de esos valores, utilizando la instrucción IF. Esta se puede combinar con un ELSE, para cubrir también el otro lado de un condicional. Se pueden anidar las declaraciones IF… ELSE. Se pueden crear comparaciones compuestas utilizando operadores lógicos que representan and, or y not.  (&&, ||,!).
+
+Para ejecutar una pieza específica de código fuente varias veces, hay dos tipos diferentes de bucles disponibles. Un bucle FOR es particularmente útil cuando sabes exactamente cuántas veces necesitas realizar un bucle; en otros casos, un bucle WHILE es simple y flexible. Con ambos tipos de bucles, puedes utilizar las declaraciones BREAK y CONTINUE para cambiar el flujo del código (para salir del bucle o saltarte una determinada iteración).
+
+Podemos extraer un fragmento de código fuente a una FUNCIÓN para que se pueda llamar fácilmente de forma repetida. Las funciones (como las variables) tienen etiquetas, y para llamar a una función, enumeramos el nombre de la función seguido de (). Una función puede requerir uno o más valores desde el exterior, y pasamos esos valores usando parámetros, que se incluyen entre paréntesis cuando se llama a la función y se especifican de manera similar entre paréntesis cuando se define la función.
+
+Los caracteres { and } se utilizan para agrupar el código. La forma en que elijas espaciar (o compactar) tu código fuente determinará tu estilo de codificación personal
